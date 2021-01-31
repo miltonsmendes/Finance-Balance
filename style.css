@@ -40,29 +40,14 @@ body{
     border-spacing: 0 0.5rem;
 }
 
-
-
-table th{
-    background: white;
-    opacity: 0.7;
-    font-weight: normal;
-    padding: 1rem 2rem;
-}
-
-table td{
-    background: rgb(255, 255, 255);
-    padding: 5px 10px;
-    border-bottom: 5px solid rgb(238, 238, 238);
-}
-
 table tr{
     opacity: 0.7;
 }
+
+
 table tr:hover{
     opacity: 1;
 }
-
-
 
 table thead th:first-child,
 table tbody tr td:first-child {
