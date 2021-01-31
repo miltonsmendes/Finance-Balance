@@ -6,7 +6,7 @@ body{
 #logo{
     background-color: rgb(118, 193, 255);
     color: rgb(2, 138, 21);
-    padding: 5%;
+    padding: 2% 5%;
 }
 
 /* TRANSACTION ================================================ */
@@ -19,12 +19,17 @@ body{
     background-color: white;
     color: rgb(35, 35, 122);
     font-size: 1rem;
+    margin:5%;
+    
 }
+
+
 .card-total{
     width: 90%;
     background-color: rgb(35, 196, 48);
     color: rgb(255, 255, 255);
     font-size: 1rem;
+    margin:5%;
 }
 
 /* MENU ================================================ */
@@ -47,9 +52,13 @@ body{
 }
 
 /* TABLE ================================================ */
-#data-table{
-    display: block;
+#transaction{
     width: 100%;
+    display: block;
+}
+
+#data-table{
+
     border-spacing: 0 0.5rem;
     overflow-x: auto;
 }
