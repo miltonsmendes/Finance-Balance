@@ -10,32 +10,29 @@ body{
 }
 
 /* TRANSACTION ================================================ */
-#transaction{
-    padding-left: 5%;
+main{
+    padding: 2% 5%;
 }
 
+
 .card{
-    width: 90%;
+    width: 100%;
     background-color: white;
     color: rgb(35, 35, 122);
     font-size: 1rem;
-    margin:5%;
-    
 }
 
 
 .card-total{
-    width: 90%;
+    width: 100%;
     background-color: rgb(35, 196, 48);
     color: rgb(255, 255, 255);
     font-size: 1rem;
-    margin:5%;
 }
 
 /* MENU ================================================ */
 .container-btn-new-trans{
     width: 90%;
-    padding-left: 5%;
     color: rgb(26, 202, 26);
     font-weight: 900;
 }
