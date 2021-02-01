@@ -87,7 +87,7 @@
 
     </main>
 
-    <div class="layer-overlay active">
+    <div class="layer-overlay">
         <div class="layer">
             <div id="form">
                 <h2>Nova Transação</h2>
@@ -122,7 +122,7 @@
                         />
                     </div>
                     <div class="input-group actions d-flex flex-row justify-content-between">
-                        <a href="#" class="button action"><button class="btn btn-danger mt-2">Cancelar</button></a>
+                        <a href="#" class="button action"><button class="btn btn-danger mt-2" onclick="layer.close()">Cancelar</button></a>
                         <a href="#" class="button action"><button class="btn btn-success mt-2">Salvar</button></a>
                     </div>
 
@@ -148,7 +148,14 @@
     <script>
         let layer = {
             open(){
-                alert('ABRIU!');
+                document
+                    .querySelector('.layer-overlay')
+                    .classList.add('active')
+            },
+            close(){
+                document
+                    .querySelector('.layer-overlay')
+                    .classList.remove('active')
             }
         }
     </script>
