@@ -46,7 +46,7 @@
 
         <section id="menu">
             <div class="container-btn-new-trans py-3">
-                <a href="#" class="">+ Nova Transação</a>
+                <a href="#" class="" onclick="layer.open()">+ Nova Transação</a>
             </div>
         </section>
 
@@ -122,8 +122,8 @@
                         />
                     </div>
                     <div class="input-group actions d-flex flex-row justify-content-between">
-                        <a href="#" class="button action"><button class="btn btn-danger me-2 mt-2">Cancelar</button></a>
-                        <a href="#" class="button action"><button class="btn btn-success m-2">Salvar</button></a>
+                        <a href="#" class="button action"><button class="btn btn-danger mt-2">Cancelar</button></a>
+                        <a href="#" class="button action"><button class="btn btn-success mt-2">Salvar</button></a>
                     </div>
 
                 </form>
@@ -145,6 +145,13 @@
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script>
+        let layer = {
+            open(){
+                alert('ABRIU!');
+            }
+        }
+    </script>
 
 </body>
 
