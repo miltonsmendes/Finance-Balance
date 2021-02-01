@@ -110,6 +110,38 @@ table tbody tr td:last-child {
 .layer{
     background: #F0F2F5;
     padding: 2.4rem;
+    width: 90%;
+}
+
+@media (min-width: 600px){
+    .layer{
+        width: 50%;
+    }
+}
+
+
+.input {
+    width: 100%;
+}
+
+.input-group{
+    width: 100%;
+}
+
+.input-group input{
+    width: 100%;
+}
+
+.button, {
+    width: 48%;
+}
+
+.btn{
+    width: 100%;
+}
+
+.button.action{
+    width: 48%;
 }
 
 
