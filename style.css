@@ -29,7 +29,6 @@ main{
     font-size: 1rem;
 }
 
-
 .card-total{
     width: 100%;
     background-color: rgb(35, 196, 48);
@@ -49,7 +48,7 @@ main{
     font-weight: 700;
     opacity: 0.7;
     text-decoration: none;
- }
+}
 
 .container-btn-new-trans a:hover{
     opacity: 1;
@@ -67,10 +66,17 @@ main{
     overflow-x: auto;
 }
 
+.income{
+    color: green;
+}
+
+.expense{
+    color: red;
+}
+
 table tr{
     opacity: 0.7;
 }
-
 
 table tr:hover{
     opacity: 1;
@@ -119,13 +125,9 @@ table tbody tr td:last-child {
     }
 }
 
-
 .input, .input-group, .input-group input, .btn {
     width: 100%;
 }
-
-
-
 
 .button, {
     width: 48%;
