@@ -35,14 +35,37 @@ let transactions = [
 // OBJETO COM FUNÇÕES PARA REALIZAR SOMA DAS ENTRAS, SAÍDAS E TOTAL
 let Transaction = {
 
+    all: transactions,
+    add(transaction){
+        Transaction.all.push(transaction)
+
+        App.reload()
+    },
+
     incomes() {
-        // somar as entradas
+        let income = 0;
+        transactions.forEach(transaction =>{
+            if (transaction.amount > 0 ) {
+                income += transaction.amount;
+            } 
+        }) 
+        
+        return income;
     },
+
     expenses() {
-        //somar as saídas
+        let expense = 0;
+        transactions.forEach(transaction =>{
+            if (transaction.amount < 0 ) {
+                expense += transaction.amount;
+            } 
+        }) 
+        
+        return expense;
     },
+
     total(){
-        //total 
+        return this.incomes() + this.expenses();
     }
 
 }
@@ -72,7 +95,23 @@ let DOM = {
         </tr>
         `
         return html
-    }
+    },
+
+    updateBalance() {
+        document
+        .querySelector('#incomeDisplay')
+        .innerHTML = Utils.formatCurrency(Transaction.incomes());
+        document
+        .querySelector('#expenseDisplay')
+        .innerHTML = Utils.formatCurrency(Transaction.expenses());
+        document
+        .querySelector('#totalDisplay')
+        .innerHTML = Utils.formatCurrency(Transaction.total());
+    },
+
+    clearTransactions(){
+        DOM.transactionsContainer.innerHTML = ""
+    },
    
 }
 
@@ -93,8 +132,31 @@ const Utils = {
     }
 }
 
-// FAZ O PREENCHIMENTO DA TABELA
-transactions.forEach(transaction =>{
-    DOM.addTransaction(transaction)
-})
+const App = {
+    init(){
+
+        // FAZ O PREENCHIMENTO DA TABELA
+        Transaction.all.forEach(transaction =>{
+            DOM.addTransaction(transaction)
+        })
+
+        DOM.updateBalance()
+
+    },
+    reload(){
+        DOM.clearTransactions()
+        App.init()
+    },
+}
+
+App.init()
+
+
+
+
+
+
+
+
+
 
