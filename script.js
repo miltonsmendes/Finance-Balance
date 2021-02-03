@@ -12,30 +12,23 @@ let layer = {
             .classList.remove('active')
     }
 }
+const Storage = {
+    get(){
+        return JSON.parse(localStorage.getItem("dev.finances: transactions")) ||
+        []
+    },
 
-// ARRAY CONTENDO AS INFORMAÇÕES DA TABELA (PROVISÓRIO)
-let transactions = [
-    {
-        description: 'Luz',
-        amount: -30000,
-        date: "01/02/2021",
-    },
-    {
-        description: 'Internet',
-        amount: -10000,
-        date: '01/02/2021',
-    },
-    {
-        description: 'Website',
-        amount: 100000,
-        date: '01/02/2021',
+    set(transactions){
+        localStorage.setItem("dev.finances: transactions", JSON.stringify(transactions))
     }
-]
+}
+
 
 // OBJETO COM FUNÇÕES PARA REALIZAR SOMA DAS ENTRAS, SAÍDAS E TOTAL
 let Transaction = {
 
-    all: transactions,
+    all: Storage.get(),
+
     add(transaction){
         Transaction.all.push(transaction)
 
@@ -150,6 +143,7 @@ const Utils = {
     }
 }
 
+// OBJETO COM FUNÇÕES P/ ARMAZENAR NO STORAGE
 const Form = {
     description: document.querySelector('input#description'),
     amount: document.querySelector('input#amount'),
@@ -213,6 +207,9 @@ const Form = {
     }
 }
 
+
+
+
 const App = {
     init(){
 
@@ -221,6 +218,7 @@ const App = {
 
         DOM.updateBalance()
 
+        Storage.set(Transaction.all)
     },
     reload(){
         DOM.clearTransactions()
