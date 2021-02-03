@@ -14,14 +14,6 @@ main{
     padding: 2% 5%;
 }
 
-#income{
-    margin-right: 1%;
-}
-
-#total{
-    margin-left: 1%;
-}
-
 .card{
     width: 100%;
     background-color: white;
@@ -123,6 +115,11 @@ table tbody tr td:last-child {
     .layer{
         width: 50%;
     }
+    
+    .space{
+        padding: 1%;
+    }
+
 }
 
 .input, .input-group, .input-group input, .btn {
